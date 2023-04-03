@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<launch>
+	<node pkg="apriltag_errcalc" type="apriltag25h9.py" name="apriltag_node_py" required="true" output="screen" />
+</launch>
+

@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<launch>
+	<!-- Include the MAVROS node configured with ttl connected to a real px4 FCU -->
+	<include file="$(find mavros)/launch/px4.launch">
+	</include>
+
+	<!-- Our node to control the drone -->
+	<node pkg="offboard_py" type="offb_node.py" name="offb_node_py" required="true" output="screen" />
+</launch>
+

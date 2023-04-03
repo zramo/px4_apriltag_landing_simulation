@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<launch>
+	<!-- Include the MAVROS node with SITL and Gazebo -->
+	<include file="$(find px4)/launch/iris_with_cam.launch">
+	</include>
+	
+	<include file="$(find apriltag_errcalc)/launch/apriltag_errcalc_rossim.launch">
+	</include>
+	
+	<include file="$(find ros_rtsp)/launch/rtsp_streams.launch">
+	</include>
+
+	<!-- Our node to control the drone -->
+	<node pkg="offboard_py" type="offb_node_hover.py" name="offb_node_py" required="true" output="screen" />
+</launch>
+
